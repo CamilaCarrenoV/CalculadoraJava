@@ -1,8 +1,7 @@
 # Calculadora en Consola (Java) 
 
-## Integrantes 
-1. Camila Carreño Valdés
-2. Kuyen 
+## Integrante
+1. Camila Carreño Valdés 
 
 ## Funciones
 - Suma, resta, multiplicación y división.
