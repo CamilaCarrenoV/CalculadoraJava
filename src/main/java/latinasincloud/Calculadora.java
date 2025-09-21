@@ -2,19 +2,6 @@ package latinasincloud;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-/*CALCULADORA JAVA
-Crear un progrmama que simule una calculadora con las siguientes funciones:
-- Sumar
-- Restar
-- Multiplicar
-- Dividir
-- Salir
-
-REQUISITOS
-* Generar una función por cada operación básica: +, -, *, /.
-* Manejo de errores: En operaciones se debe validar si el divisor es mayor a 0 para evitar error de cálculo.
-* Menú Interactivo: Usar Scanner para pedir datos al Usuario.
-* GitHub: Subir el proyecto con commits claros. */
 
 public class Calculadora {
     private static Scanner scanner = new Scanner(
@@ -46,11 +33,11 @@ public class Calculadora {
                     break;
 
                 case 3:
-                    //operacionMultiplicacion();
+                    operacionMultiplicacion();
                     break;
 
                 case 4:
-                    //operacionDivision();
+                    operacionDivision();
                     break;
 
                 case 5:
@@ -93,5 +80,40 @@ public class Calculadora {
             System.out.println("Error: debe ingresar un número válido.");
             scanner.nextLine();
         }
+    }
+
+    private static void operacionMultiplicacion(){
+
+        try{
+            System.out.println(">Primer número");
+            numb1 = scanner.nextDouble();
+            System.out.println(">Segundo número");
+            numb2 = scanner.nextDouble();
+            resultado = numb1 * numb2;
+            System.out.println("El resultado es: " + resultado);
+        } catch (InputMismatchException e) {
+            System.out.println("Error: debe ingresar un número válido.");
+            scanner.nextLine();
+        }
+    }
+
+    private static void operacionDivision(){
+
+        try{
+            System.out.println(">Primer número");
+            numb1 = scanner.nextDouble();
+            System.out.println(">Segundo número");
+            numb2 = scanner.nextDouble();
+            if (numb2 == 0) {
+                System.out.println("Error: no se puede dividir por 0. Ingresa otro número.");
+            } else {
+                resultado = numb1 / numb2;
+                System.out.println("Resultado: " + resultado);
+            }
+        }catch (InputMismatchException e) {
+            System.out.println("Error: debe ingresar un número válido.");
+            scanner.nextLine();
+        }
+
     }
 }
