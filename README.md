@@ -1,6 +1,6 @@
 # Calculadora en Consola (Java) 
 
-## Integrante
+## Integrantes
 1. Camila Carreño Valdés 
 
 ## Funciones
