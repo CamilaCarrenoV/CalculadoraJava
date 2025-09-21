@@ -42,7 +42,7 @@ public class Calculadora {
                     break;
 
                 case 2:
-                    //operacionResta();
+                    operacionResta();
                     break;
 
                 case 3:
@@ -73,6 +73,21 @@ public class Calculadora {
             System.out.println(">Segundo número");
             numb2 = scanner.nextDouble();
             resultado = numb1 + numb2;
+            System.out.println("El resultado es: " + resultado);
+        } catch (InputMismatchException e) {
+            System.out.println("Error: debe ingresar un número válido.");
+            scanner.nextLine();
+        }
+    }
+
+    private static void operacionResta(){
+
+        try {
+            System.out.println(">Primer número");
+            numb1 = scanner.nextDouble();
+            System.out.println(">Segundo número");
+            numb2 = scanner.nextDouble();
+            resultado = numb1 - numb2;
             System.out.println("El resultado es: " + resultado);
         } catch (InputMismatchException e) {
             System.out.println("Error: debe ingresar un número válido.");
